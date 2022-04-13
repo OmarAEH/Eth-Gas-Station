@@ -12,7 +12,7 @@ def ethereum_gas_station():
     """
     This function will get Ethereum gas fees from ethgasstation.info in all transaction speeds.
     """
-    url = 'https://ethgasstation.info/api/ethgasAPI.json?'  # API url
+    url = "YOUR-API-KEY-HERE"  # API url
     respond = requests.get(url)  # Sending the request to the API server
     gas = json.loads(respond.text)  # Converting the request data to JSON
     safe_low = jsonpath.jsonpath(gas, "safeLow")  # Fetching safe low eth gas
